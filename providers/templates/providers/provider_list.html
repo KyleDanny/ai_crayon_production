@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crayon Providers</title>
+  </head>
+  <body>
+    <h1>Crayon Providers</h1>
+    <p>Test: {{ "Hello, World!" }}</p>
+    <!-- Add this line to test template rendering -->
+
+    <ul>
+      {% for provider in providers %}
+      <li>
+        {{ provider.name }} - Standard: ${{ provider.standard_crayon_price }},
+        Premium: ${{ provider.premium_crayon_price }}, Eco-Friendly: ${{
+        provider.eco_friendly_crayon_price|default:"N/A" }} {% if
+        provider.offers_bulk_discount %} (Bulk Discount Available)
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

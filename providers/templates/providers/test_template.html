@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Template</title>
+  </head>
+  <body>
+    <h1>Test Template</h1>
+    <ul>
+      {% for provider in providers %}
+      <li>
+        {{ provider.name }} - Eco-Friendly: ${{
+        provider.eco_friendly_crayon_price|default:"N/A" }}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
