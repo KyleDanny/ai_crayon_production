@@ -5,17 +5,32 @@
   </head>
   <body>
     <h1>Crayon Providers</h1>
-    <p>Test: {{ "Hello, World!" }}</p>
+
     <!-- Add this line to test template rendering -->
+
+    <h2>Standard Crayons</h2>
 
     <ul>
       {% for provider in providers %}
       <li>
         {{ provider.name }} - Standard: ${{ provider.standard_crayon_price }},
-        Premium: ${{ provider.premium_crayon_price }}, Eco-Friendly: ${{
-        provider.eco_friendly_crayon_price|default:"N/A" }} {% if
-        provider.offers_bulk_discount %} (Bulk Discount Available)
+        Premium: ${{ provider.premium_crayon_price }}
       </li>
+      <p>Eco-Friendly: ${{ provider.eco_friendly_crayon_price }}</p>
+      {% endfor %}
+    </ul>
+
+    <h2>Bulk Discounts</h2>
+
+    <ul>
+      {% for provider in providers %}
+      <span>
+        {% if provider.offers_bulk_discount %}
+        <p>{{ provider.name }} - (Bulk Discount Available)</p>
+        {% else %}
+        <p>{{ provider.name }} - (Bulk Discount Not Available)</p>
+        {% endif %}
+      </span>
       {% endfor %}
     </ul>
   </body>
