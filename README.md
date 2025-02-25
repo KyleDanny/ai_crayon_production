@@ -1,5 +1,17 @@
 # ai_crayon_production
 
+## AI Model
+
+- Claude 3.5 Sonnet (vscode)
+- GPT o1 (site & vscode)
+- DeepSeek Coder (site & vscode)
+
+## AI Prompt
+
+"Create a web application using Django that manages a list of crayon providers. The application will display details about each provider, including the types of crayons they offer (e.g., standard, premium, eco-friendly) and their current pricing. Additionally, include a checkmark to indicate whether the provider offers bulk discounts. The application should have a superuser for administrative tasks.
+
+The project will be set up on a Mac, starting from an empty Git repository. The Django project will be named "crayon_production", and it should be designed to handle the needs of a business that creates and sells crayons to various providers."
+
 ## Setup
 
 1. Install dependencies:
@@ -37,6 +49,8 @@ http://127.0.0.1:8000/providers/
 - Customizable: Tailors code to your needs (e.g., Mac setup, crayon business).
 
 - Always Available: Helps anytime, even when humans can’t.
+
+- Can switch between models to see which one is best for the task.
 
 ### Cons of Using AI for Code
 
